@@ -1,6 +1,6 @@
 export const defaultTheme = {
 	colors: {
-		"base-background": "#E2E8F0",
+		"base-background": "#fff",
 		"base-primary": "#0069CA",
 		"base-secondary": "#8C19D2",
 		"title-profile": "#171923",
