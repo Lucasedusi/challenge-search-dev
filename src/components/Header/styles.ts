@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
-	width: 100%;
 	display: flex;
 	background: #fff;
 `;
@@ -11,7 +10,7 @@ export const Wrapper = styled.div`
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem 6rem;
+	padding: 1rem 8rem;
 	gap: 6rem;
 `;
 
