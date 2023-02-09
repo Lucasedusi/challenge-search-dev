@@ -1,3 +1,10 @@
+import { Header } from "../../components/Header";
+import { ProfileContainer } from "./styles";
+
 export function Profile() {
-	return <h1>Profile</h1>;
+	return (
+		<ProfileContainer>
+			<Header />
+		</ProfileContainer>
+	);
 }
