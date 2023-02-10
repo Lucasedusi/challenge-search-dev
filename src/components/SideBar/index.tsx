@@ -36,12 +36,12 @@ export function SideBar({ userInfo }: SideBarProps) {
 
 			<Followers>
 				<div>
-					<img src={UserGroup} alt="" />
+					<img src={UserGroup} alt="Ícone de grupos de usuários" />
 					<p>{userInfo?.followers} Seguidores</p>
 				</div>
 
 				<div>
-					<img src={Heart} alt="" />
+					<img src={Heart} alt="Ícone de Coração" />
 					<p>{userInfo?.following} Seguindo</p>
 				</div>
 			</Followers>
@@ -49,28 +49,28 @@ export function SideBar({ userInfo }: SideBarProps) {
 			<GeneralInfo>
 				{userInfo?.company && (
 					<div>
-						<img src={Work} alt="" />
+						<img src={Work} alt="Ícone da empresa onde trabalha" />
 						<p>{userInfo.company}</p>
 					</div>
 				)}
 
 				{userInfo?.location && (
 					<div>
-						<img src={Location} alt="" />
+						<img src={Location} alt="Ícone da cidade em que se localiza" />
 						<p>{userInfo.location}</p>
 					</div>
 				)}
 
 				{userInfo?.email && (
 					<div>
-						<img src={Email} alt="" />
+						<img src={Email} alt="Ícone de Email" />
 						<p>{userInfo.email}</p>
 					</div>
 				)}
 
 				{userInfo?.blog && (
 					<div>
-						<img src={WebSite} alt="" />
+						<img src={WebSite} alt="Ícone de Website" />
 						<a href={`${userInfo.blog}`} target="_blank">
 							{userInfo.blog}
 						</a>
@@ -79,7 +79,7 @@ export function SideBar({ userInfo }: SideBarProps) {
 
 				{userInfo?.twitter_username && (
 					<div>
-						<img src={SocialMedia} alt="" />
+						<img src={SocialMedia} alt="Ícone do Twitter" />
 						<a
 							href={`https://twitter.com/${userInfo.twitter_username}`}
 							target="_blank"
