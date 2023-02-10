@@ -7,6 +7,7 @@ import Stars from "../../assets/stars.svg";
 import { useEffect, useState } from "react";
 import api from "../../service/api";
 import { Repository } from "../../@types/profile";
+import { WifiNone } from "phosphor-react";
 
 type RepositoriesProps = {
 	search: string;
@@ -48,7 +49,7 @@ export function Repositories({ search, login }: RepositoriesProps) {
 							<img src={Stars} alt="" />
 							<p>{repository.stargazers_count}</p>
 						</div>
-						˚
+						<WifiNone size={50} />
 						<p>
 							{formatDistance(new Date(repository.updated_at), new Date(), {
 								addSuffix: true,

@@ -33,8 +33,7 @@ export const Footer = styled.div`
 	display: flex;
 	margin: 1.2rem 0;
 	flex-direction: row;
-	align-items: center;
-	gap: 1rem;
+	align-items: flex-end;
 
 	> div {
 		display: flex;
