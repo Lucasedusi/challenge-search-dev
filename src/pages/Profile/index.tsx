@@ -13,6 +13,7 @@ import {
 } from "./styles";
 
 import IconSearch from "../../assets/icon-search.svg";
+import { Spinner } from "../../components/Spinner";
 
 export function Profile() {
 	const { state: user } = useLocation();
@@ -20,7 +21,7 @@ export function Profile() {
 
 	const [userInfo, setUserInfo] = useState<UserInfo>();
 	const [search, setSearch] = useState("");
-	const [loading, setLoading] = useState(false);
+	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState<MessageError | null>(null);
 
 	useEffect(() => {
@@ -32,6 +33,7 @@ export function Profile() {
 
 			try {
 				const { data } = await api.get<UserInfo>(`users/${user}`);
+
 				setUserInfo(data);
 			} catch (err: any) {
 				if (err?.response?.status === 404) {
@@ -49,9 +51,8 @@ export function Profile() {
 		getUser();
 	}, [user]);
 
-	if (loading) return <h1>Carregando</h1>;
-
-	if (error) return <h1>deu ruim</h1>;
+	if (loading) return <Spinner />;
+	if (error) return <h1>ruim</h1>;
 
 	return (
 		<ProfileContainer>
