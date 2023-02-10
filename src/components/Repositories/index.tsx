@@ -1,9 +1,12 @@
 import { Container, Footer, Wrapper } from "./styles";
 
+import { format, formatDistance, formatDistanceToNow } from "date-fns";
+import ptBr from "date-fns/locale/pt-BR";
+
 import Stars from "../../assets/stars.svg";
 import { useEffect, useState } from "react";
 import api from "../../service/api";
-import { Repository, UserInfo } from "../../@types/profile";
+import { Repository } from "../../@types/profile";
 
 type RepositoriesProps = {
 	search: string;
@@ -45,7 +48,13 @@ export function Repositories({ search, login }: RepositoriesProps) {
 							<img src={Stars} alt="" />
 							<p>{repository.stargazers_count}</p>
 						</div>
-						˚<p>{repository.updated_at}</p>
+						˚
+						<p>
+							{formatDistance(new Date(repository.updated_at), new Date(), {
+								addSuffix: true,
+								locale: ptBr,
+							})}
+						</p>
 					</Footer>
 				</Wrapper>
 			))}
