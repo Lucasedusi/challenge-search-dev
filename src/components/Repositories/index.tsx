@@ -6,16 +6,25 @@ import api from "../../service/api";
 import { Repository } from "../../@types/profile";
 
 type RepositoriesProps = {
+	search: string;
 	login?: string;
 };
 
-export function Repositories({ login }: RepositoriesProps) {
+export function Repositories({ search, login }: RepositoriesProps) {
 	const [repositories, setRepositories] = useState<Repository[]>([]);
+
+	const filteredRepos =
+		search.length === 0
+			? repositories
+			: repositories.filter(({ name }) => name.includes(search));
 
 	useEffect(() => {
 		const getRepositories = async () => {
 			const { data } = await api.get<Repository[]>(`users/${login}/repos`);
-			setRepositories(data);
+			const sortedRepos = data.sort(
+				(a, b) => b.stargazers_count - a.stargazers_count
+			);
+			setRepositories(sortedRepos);
 		};
 
 		getRepositories();
@@ -23,24 +32,18 @@ export function Repositories({ login }: RepositoriesProps) {
 
 	return (
 		<Container>
-			{repositories.map((repository) => (
+			{filteredRepos.map((repository) => (
 				<Wrapper>
 					<h1>{repository.name}</h1>
 
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-						turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-						nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-						tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-						feugiat lectus.
-					</p>
+					<p>{repository.description}</p>
 
 					<Footer>
 						<div>
 							<img src={Stars} alt="" />
-							<p>100</p>
+							<p>{repository.stargazers_count}</p>
 						</div>
-						˚<p>Atualizado há 2 dias</p>
+						˚<p>{repository.updated_at}</p>
 					</Footer>
 				</Wrapper>
 			))}
