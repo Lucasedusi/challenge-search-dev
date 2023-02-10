@@ -9,14 +9,14 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${({ theme }) => theme.colors["base-background"]};
+    background: #FCFCFC;
     -webkit-font-smoothing: antialiased;
-    font-family: ${({ theme }) => theme.fonts.title};
+     font-family: "Inter";
 
   }
 
   body, input, textarea, button {
-    font-family: ${({ theme }) => theme.fonts.regular};
+    font-family: "Inter";
     font-weight: 400;
   }
 
