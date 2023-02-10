@@ -18,6 +18,10 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
   <img alt="SearchDev" title="#SearchDev" src="./src/assets/img-demonstracao.png" />
 </h1>
 
+<a href="https://search-dev-challenge.netlify.app/" target="_blank">
+<img src="https://user-images.githubusercontent.com/71772559/178192066-d52e0cf7-906e-4baa-80f3-4b49dde153c0.png" />
+</a>
+
 
 ### Principais Features
 
