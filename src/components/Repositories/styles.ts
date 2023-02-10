@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.aside`
 	display: flex;
 	flex-direction: column;
-	background: #fff;
+	background: ${({ theme }) => theme.colors["white"]};
 	border-radius: 8px;
 	padding: 1.2rem;
 `;
@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
 		font-family: "Inter";
 		font-weight: 700;
 		font-size: 20px;
-		color: #171923;
+		color: ${({ theme }) => theme.colors["title-repository"]};
 	}
 
 	> p {
@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 24px;
-		color: #4a5568;
+		color: ${({ theme }) => theme.colors["description-profile"]};
 	}
 `;
 
@@ -47,7 +47,7 @@ export const Footer = styled.div`
 			font-weight: 400;
 			font-size: 14px;
 			line-height: 24px;
-			color: #4a5568;
+			color: ${({ theme }) => theme.colors["description-profile"]};
 		}
 	}
 
@@ -56,6 +56,6 @@ export const Footer = styled.div`
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 24px;
-		color: #4a5568;
+		color: ${({ theme }) => theme.colors["description-profile"]};
 	}
 `;

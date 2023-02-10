@@ -17,20 +17,20 @@ export const ErrorContainer = styled.div`
 		font-family: "Inter";
 		font-weight: 700;
 		font-size: 14px;
-		color: #0069ca;
+		color: 0069ca;
 	}
 
 	.error-button {
 		gap: 0.5rem;
 		display: flex;
-		background: #8c19d2;
+		background: ${({ theme }) => theme.colors["secondary"]};
 		border-radius: 6px;
 		justify-content: center;
 		align-items: center;
 		padding: 0.5rem 1.5rem;
 		border: 0;
 
-		color: #fff;
+		color: ${({ theme }) => theme.colors["white"]};
 		font-size: 16px;
 		font-weight: 700;
 		font-family: "Inter";

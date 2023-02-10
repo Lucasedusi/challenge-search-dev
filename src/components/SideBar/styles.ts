@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.aside`
 	display: flex;
 	flex-direction: column;
-	background: #fff;
+	background: ${({ theme }) => theme.colors["white"]};
 	border-radius: 8px;
 	padding: 1.2rem;
 `;
@@ -30,7 +30,7 @@ export const Wrapper = styled.div`
 			font-family: "Inter";
 			font-weight: 700;
 			font-size: 20px;
-			color: #171923;
+			color: ${({ theme }) => theme.colors["title-repository"]};
 			margin: 0.2rem 0;
 		}
 
@@ -51,7 +51,7 @@ export const Description = styled.div`
 		font-family: "Inter";
 		font-weight: 400;
 		font-size: 16px;
-		color: #4a5568;
+		color: ${({ theme }) => theme.colors["description-profile"]};
 		line-height: 24px;
 	}
 `;
@@ -71,7 +71,7 @@ export const Followers = styled.div`
 			font-family: "Inter";
 			font-weight: 400;
 			font-size: 14px;
-			color: #4a5568;
+			color: ${({ theme }) => theme.colors["description-profile"]};
 			padding: 0.5rem 0;
 		}
 	}
@@ -92,7 +92,7 @@ export const GeneralInfo = styled.div`
 			font-family: "Inter";
 			font-weight: 400;
 			font-size: 14px;
-			color: #4a5568;
+			color: ${({ theme }) => theme.colors["description-profile"]};
 			padding: 0.5rem 0;
 		}
 	}

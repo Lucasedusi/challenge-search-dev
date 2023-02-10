@@ -28,7 +28,7 @@ export const TitleContainer = styled.div`
 		font-size: 80px;
 		line-height: 109px;
 		letter-spacing: 0.01em;
-		color: #0069ca;
+		color: ${({ theme }) => theme.colors["primary"]};
 	}
 
 	.title-dev {
@@ -39,7 +39,7 @@ export const TitleContainer = styled.div`
 		line-height: 109px;
 		letter-spacing: 0.01em;
 
-		color: #8c19d2;
+		color: ${({ theme }) => theme.colors["secondary"]};
 	}
 `;
 
@@ -82,14 +82,14 @@ export const FormSearch = styled.form`
 
 	.button-search {
 		display: flex;
-		background: #8c19d2;
+		background: ${({ theme }) => theme.colors["secondary"]};
 		border-radius: 6px;
 		justify-content: center;
 		align-items: center;
 		padding: 10px 52px;
 		border: 0;
 
-		color: #fff;
+		color: ${({ theme }) => theme.colors["white"]};
 		font-family: "Inter";
 		font-weight: 600;
 		font-size: 18px;

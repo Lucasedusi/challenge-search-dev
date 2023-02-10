@@ -1,9 +1,10 @@
 export const defaultTheme = {
 	colors: {
 		"base-background": "#FCFCFC",
-		"base-primary": "#0069CA",
-		"base-secondary": "#8C19D2",
-		"title-profile": "#171923",
+		primary: "#0069CA",
+		secondary: "#8C19D2",
+		white: "#fff",
+		"title-repository": "#171923",
 		"description-profile": "#4A5568",
 	},
 

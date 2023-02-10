@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 
 export const Header = styled.div`
 	display: flex;
-	background-color: #fff;
+	background-color: ${({ theme }) => theme.colors["white"]};
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
@@ -45,7 +45,7 @@ export const TitleContainer = styled.div`
 		font-size: 32px;
 		letter-spacing: 0.01em;
 
-		color: #0069ca;
+		color: ${({ theme }) => theme.colors["primary"]};
 	}
 
 	.title-dev {
@@ -54,7 +54,7 @@ export const TitleContainer = styled.div`
 		font-size: 32px;
 		letter-spacing: 0.01em;
 
-		color: #8c19d2;
+		color: ${({ theme }) => theme.colors["secondary"]};
 	}
 `;
 
@@ -67,7 +67,7 @@ export const FormSearch = styled.form`
 		width: 500px;
 		height: 48px;
 		padding: 0 3rem;
-		border: 2px solid #8c19d2;
+		border: 2px solid ${({ theme }) => theme.colors["secondary"]};
 		border-radius: 6px;
 		font-family: "Nunito";
 		font-weight: 400;
