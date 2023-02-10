@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
 
 export const Header = styled.div`
 	display: flex;
+	background-color: #fff;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;

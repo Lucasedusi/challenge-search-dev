@@ -3,7 +3,7 @@ import { Container, Footer, Wrapper } from "./styles";
 import Stars from "../../assets/stars.svg";
 import { useEffect, useState } from "react";
 import api from "../../service/api";
-import { Repository } from "../../@types/profile";
+import { Repository, UserInfo } from "../../@types/profile";
 
 type RepositoriesProps = {
 	search: string;
@@ -34,7 +34,9 @@ export function Repositories({ search, login }: RepositoriesProps) {
 		<Container>
 			{filteredRepos.map((repository) => (
 				<Wrapper>
-					<h1>{repository.name}</h1>
+					<a href={repository.html_url} target="_blank">
+						{repository.name}
+					</a>
 
 					<p>{repository.description}</p>
 

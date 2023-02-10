@@ -71,14 +71,21 @@ export function SideBar({ userInfo }: SideBarProps) {
 				{userInfo?.blog && (
 					<div>
 						<img src={WebSite} alt="" />
-						<p>{userInfo.blog}</p>
+						<a href={userInfo.blog} target="_blank">
+							{userInfo.blog}{" "}
+						</a>
 					</div>
 				)}
 
 				{userInfo?.twitter_username && (
 					<div>
 						<img src={SocialMedia} alt="" />
-						<p>@{userInfo.twitter_username}</p>
+						<a
+							href={`https://twitter.com/${userInfo.twitter_username}`}
+							target="_blank"
+						>
+							@{userInfo.twitter_username}
+						</a>
 					</div>
 				)}
 			</GeneralInfo>

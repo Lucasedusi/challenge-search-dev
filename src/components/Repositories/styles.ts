@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 	border-bottom: 1px solid #e2e8f0;
 	margin-bottom: 1.2rem;
 
-	> h1 {
+	> a {
 		font-family: "Inter";
 		font-weight: 700;
 		font-size: 20px;

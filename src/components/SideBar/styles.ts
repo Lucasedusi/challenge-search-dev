@@ -87,7 +87,8 @@ export const GeneralInfo = styled.div`
 		align-items: center;
 		gap: 0.6rem;
 
-		> p {
+		> p,
+		a {
 			font-family: "Inter";
 			font-weight: 400;
 			font-size: 14px;
