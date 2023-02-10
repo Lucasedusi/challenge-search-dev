@@ -1,4 +1,4 @@
-import { Container, FormSearch, TitleContainer, Wrapper } from "./styles";
+import { Container, FormSearch, LogoContainer, Wrapper } from "./styles";
 import { useNavigate } from "react-router-dom";
 
 import IconSearch from "../../assets/icon-search.svg";
@@ -20,10 +20,10 @@ export function Home() {
 	return (
 		<Container>
 			<Wrapper>
-				<TitleContainer>
+				<LogoContainer>
 					<h1 className="title-search">Search</h1>
 					<h1 className="title-dev">d_evs</h1>
-				</TitleContainer>
+				</LogoContainer>
 				<FormSearch onSubmit={handleSubmit}>
 					<img className="icon-search" src={IconSearch} />
 					<input

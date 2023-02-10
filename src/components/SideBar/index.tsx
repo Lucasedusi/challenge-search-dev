@@ -71,8 +71,8 @@ export function SideBar({ userInfo }: SideBarProps) {
 				{userInfo?.blog && (
 					<div>
 						<img src={WebSite} alt="" />
-						<a href={userInfo.blog} target="_blank">
-							{userInfo.blog}{" "}
+						<a href={`${userInfo.blog}`} target="_blank">
+							{userInfo.blog}
 						</a>
 					</div>
 				)}

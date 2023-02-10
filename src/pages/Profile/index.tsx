@@ -10,6 +10,7 @@ import {
 	TitleContainer,
 	Wrapper,
 	Header,
+	ContainerInfo,
 } from "./styles";
 
 import IconSearch from "../../assets/icon-search.svg";
@@ -81,7 +82,12 @@ export function Profile() {
 				</FormSearch>
 			</Header>
 			<Wrapper>
-				<SideBar userInfo={userInfo} />
+				<ContainerInfo>
+					<SideBar userInfo={userInfo} />
+					<a target="_blank" href={userInfo?.blog} className="contact-button">
+						Contato
+					</a>
+				</ContainerInfo>
 				<Repositories search={search} login={userInfo?.login} />
 			</Wrapper>
 		</ProfileContainer>

@@ -15,11 +15,15 @@ export const Wrapper = styled.div`
 	padding: 30px;
 `;
 
-export const TitleContainer = styled.div`
+export const LogoContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
+
+	@media only screen and (max-width: 768px) {
+		gap: 0.4rem;
+	}
 
 	.title-search {
 		font-family: "Nunito";
@@ -29,6 +33,10 @@ export const TitleContainer = styled.div`
 		line-height: 109px;
 		letter-spacing: 0.01em;
 		color: ${({ theme }) => theme.colors["primary"]};
+
+		@media only screen and (max-width: 768px) {
+			font-size: 32px;
+		}
 	}
 
 	.title-dev {
@@ -38,8 +46,11 @@ export const TitleContainer = styled.div`
 		font-size: 80px;
 		line-height: 109px;
 		letter-spacing: 0.01em;
-
 		color: ${({ theme }) => theme.colors["secondary"]};
+
+		@media only screen and (max-width: 768px) {
+			font-size: 32px;
+		}
 	}
 `;
 
@@ -48,6 +59,10 @@ export const FormSearch = styled.form`
 	display: flex;
 	margin-top: 48px;
 	gap: 1.5rem;
+
+	@media only screen and (max-width: 768px) {
+		flex-direction: column;
+	}
 
 	> input {
 		width: 500px;
@@ -60,6 +75,10 @@ export const FormSearch = styled.form`
 		font-size: 18px;
 		line-height: 28px;
 		color: rgba(0, 0, 0, 0.8);
+
+		@media only screen and (max-width: 768px) {
+			width: 100%;
+		}
 
 		::placeholder {
 			font-family: "Inter";
@@ -78,6 +97,10 @@ export const FormSearch = styled.form`
 		top: 50%;
 		left: 1rem;
 		transform: translateY(-50%);
+
+		@media only screen and (max-width: 768px) {
+			top: 20%;
+		}
 	}
 
 	.button-search {

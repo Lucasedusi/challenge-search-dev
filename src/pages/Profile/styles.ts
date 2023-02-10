@@ -2,6 +2,33 @@ import styled from "styled-components";
 
 export const ProfileContainer = styled.div``;
 
+export const ContainerInfo = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	.contact-button {
+		display: flex;
+		background: ${({ theme }) => theme.colors["secondary"]};
+		border-radius: 6px;
+		justify-content: center;
+		align-items: center;
+		padding: 10px 52px;
+		border: 0;
+
+		color: ${({ theme }) => theme.colors["white"]};
+		font-family: "Inter";
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 28px;
+		transition: all 0.3s;
+
+		:hover {
+			opacity: 0.9;
+		}
+	}
+`;
+
 export const Wrapper = styled.div`
 	margin: 5rem 7rem;
 	padding: 0 1rem;
