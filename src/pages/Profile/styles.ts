@@ -10,15 +10,26 @@ export const Wrapper = styled.div`
 	grid-template-columns: 256px 1fr;
 	gap: 2rem;
 	align-items: flex-start;
+
+	@media only screen and (max-width: 768px) {
+		grid-template-columns: 1fr;
+		margin: 1rem 1rem;
+	}
 `;
 
 export const Header = styled.div`
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	padding: 1rem 8rem;
 	gap: 6rem;
+
+	@media only screen and (max-width: 768px) {
+		flex-direction: column;
+		padding: 1rem;
+		gap: 1.5rem;
+	}
 `;
 
 export const TitleContainer = styled.div`
@@ -62,6 +73,10 @@ export const FormSearch = styled.form`
 		font-size: 18px;
 		line-height: 28px;
 		color: rgba(0, 0, 0, 0.8);
+
+		@media only screen and (max-width: 768px) {
+			width: 100%;
+		}
 
 		::placeholder {
 			font-family: "Inter";
