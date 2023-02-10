@@ -28,7 +28,6 @@ export const TitleContainer = styled.div`
 		font-size: 80px;
 		line-height: 109px;
 		letter-spacing: 0.01em;
-
 		color: #0069ca;
 	}
 

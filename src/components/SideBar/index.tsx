@@ -13,62 +13,74 @@ import Email from "../../assets/email.svg";
 import WebSite from "../../assets/website.svg";
 import Location from "../../assets/location.svg";
 import SocialMedia from "../../assets/social.svg";
+import { UserInfo } from "../../@types/profile";
 
-export function SideBar() {
+type SideBarProps = {
+	userInfo?: UserInfo;
+};
+
+export function SideBar({ userInfo }: SideBarProps) {
 	return (
 		<Container>
 			<Wrapper>
-				<img
-					className="avatarProfile"
-					src="https://avatars.githubusercontent.com/u/33089713?v=4"
-					width={50}
-				/>
+				<img className="avatarProfile" src={userInfo?.avatar_url} width={50} />
 				<div className="info">
-					<h1>Lucas Edu</h1>
-					<p>@lucasedusi</p>
+					<h1>{userInfo?.name}</h1>
+					<p>@{userInfo?.login}</p>
 				</div>
 			</Wrapper>
 
 			<Description>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-					fugit, tempora quasi nostrum Modi.
-				</p>
+				<p>{userInfo?.bio}</p>
 			</Description>
 
 			<Followers>
 				<div>
 					<img src={UserGroup} alt="" />
-					<p>240 Seguidores</p>
+					<p>{userInfo?.followers} Seguidores</p>
 				</div>
 
 				<div>
 					<img src={Heart} alt="" />
-					<p>42 Seguindo</p>
+					<p>{userInfo?.following} Seguindo</p>
 				</div>
 			</Followers>
 
 			<GeneralInfo>
-				<div>
-					<img src={Work} alt="" />
-					<p>Petizze</p>
-				</div>
-				<div>
-					<img src={Location} alt="" />
-					<p>São Paulo</p>
-				</div>
-				<div>
-					<img src={Email} alt="" />
-					<p>lucasedu@gmail.com</p>
-				</div>
-				<div>
-					<img src={WebSite} alt="" />
-					<p>www.lucas.com</p>
-				</div>
-				<div>
-					<img src={SocialMedia} alt="" />
-					<p>@lucasdudu</p>
-				</div>
+				{userInfo?.company && (
+					<div>
+						<img src={Work} alt="" />
+						<p>{userInfo.company}</p>
+					</div>
+				)}
+
+				{userInfo?.location && (
+					<div>
+						<img src={Location} alt="" />
+						<p>{userInfo.location}</p>
+					</div>
+				)}
+
+				{userInfo?.email && (
+					<div>
+						<img src={Email} alt="" />
+						<p>{userInfo.email}</p>
+					</div>
+				)}
+
+				{userInfo?.blog && (
+					<div>
+						<img src={WebSite} alt="" />
+						<p>{userInfo.blog}</p>
+					</div>
+				)}
+
+				{userInfo?.twitter_username && (
+					<div>
+						<img src={SocialMedia} alt="" />
+						<p>@{userInfo.twitter_username}</p>
+					</div>
+				)}
 			</GeneralInfo>
 		</Container>
 	);
