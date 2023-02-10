@@ -13,7 +13,12 @@ import {
 } from "./styles";
 
 import IconSearch from "../../assets/icon-search.svg";
+
 import { Spinner } from "../../components/Spinner";
+import { Error } from "../../components/Error";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export function Profile() {
 	const { state: user } = useLocation();
@@ -52,10 +57,14 @@ export function Profile() {
 	}, [user]);
 
 	if (loading) return <Spinner />;
-	if (error) return <h1>ruim</h1>;
+
+	if (error) {
+		return <Error />;
+	}
 
 	return (
 		<ProfileContainer>
+			<ToastContainer />
 			<Header>
 				<TitleContainer>
 					<h1 className="title-search">Search</h1>
