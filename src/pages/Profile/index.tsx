@@ -13,6 +13,8 @@ import {
 	ContainerInfo,
 } from "./styles";
 
+import "react-toastify/dist/ReactToastify.css";
+
 import IconSearch from "../../assets/icon-search.svg";
 
 import { Spinner } from "../../components/Spinner";
