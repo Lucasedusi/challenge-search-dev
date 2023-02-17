@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-<p align="left">O projeto Search Dev é uma aplicação com o intuito de buscar Dev's através da API do Github, sendo assim pode-se buscar um usuário e visualizar o seu perfil com as suas principais informações, além de disso, há a possiblidade de buscar os repositórios do respectivo usuário.<br /> Lembrando que ao buscar um usuário inexistente ou deixar o campo de busca em branco será retornados os dvidos tratamentos de erros  </p>
+<p align="left">O projeto Search Dev é uma aplicação com o intuito de buscar Dev's através da API do Github, sendo assim pode-se buscar um usuário e visualizar o seu perfil com as suas principais informações, além de disso, há a possiblidade de buscar os repositórios do respectivo usuário.<br /> Lembrando que ao buscar um usuário inexistente ou deixar o campo de busca em branco será retornados os dvidos tratamentos de erros.  </p>
 
 
 ### Pré-requisitos
